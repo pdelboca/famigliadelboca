@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famiglia Del Boca</title>
+    <script src='js/familytree.js'></script>
+</head>
+<body>
+    <div style="width:100%; height:700px;" id="tree"/>
+</body>
+<script>
+
+FamilyTree.templates.delBoca = Object.assign({}, FamilyTree.templates.tommy);
+
+FamilyTree.templates.delBoca.field_0 = '<text data-width="230" style="font-size: 20px;font-weight:bold;" fill="#ffffff" x="10" y="90" text-anchor="start">{val}</text>'
+FamilyTree.templates.delBoca.field_1 = '<text data-width="230" style="font-size: 14px;" fill="#ffffff" x="10" y="50" text-anchor="start">{val}</text>'
+FamilyTree.templates.delBoca.field_2 = '<text data-width="230" style="font-size: 14px;" fill="#ffffff" x="10" y="65" text-anchor="start">{val}</text>'
+
+FamilyTree.templates.delBoca_male = Object.assign({}, FamilyTree.templates.delBoca);
+FamilyTree.templates.delBoca_male.node = '<rect x="0" y="0" height="120" width="250" stroke-width="1" fill="#F57C00" stroke="#aeaeae" rx="7" ry="7"></rect>';
+FamilyTree.templates.delBoca_female = Object.assign({}, FamilyTree.templates.delBoca);
+FamilyTree.templates.delBoca_female.node = '<rect x="0" y="0" height="120" width="250" stroke-width="1" fill="#039BE5" stroke="#aeaeae" rx="7" ry="7"></rect>';
+
+
+
+var family = new FamilyTree(document.getElementById("tree"), {
+    template: "delBoca",
+    nodeMouseClick: FamilyTree.action.expandCollapse,
+    collapse: {
+                level: 2,
+                allChildren: true
+            },
+    tags: {
+            hide: {
+                state: FamilyTree.COLLAPSE
+            }
+        },
+    nodeBinding: {
+        field_0: "name",
+        field_1: "birth",
+        field_2: "death",
+    }});
+
+family.load([
+    // Primera Generacion
+    { id: 1, name: "Giovanni Del Boca", gender: 'male'},
+    // Segunda Generacion
+    { id: 2, pids: [3], fid: 1, name: "Gaudenzio Del Boca", gender: 'male', birth: '25/02/1853 (Boca)', death: '--/--/1929'},
+    { id: 3, pids: [2], name: "Marianna Vallazza", gender: 'female', birth: "12/03/1855 (Boca)", death: "--/--/----" },
+    // Tercera Generacion
+    { id: 4, pids: [5], fid: 2, mid: 3, name: "Maria Margherita", gender: 'female', birth: "15/01/1877 (Boca)", death: "--/--/---- (Córdoba, Arg)"},
+    { id: 5, pids: [4], name: "Giuseppe Vallaza", gender: 'male'},
+    { id: 6, pids: [7], fid: 2, mid: 3, name: "Vittorio Giovanni Del Boca", gender: 'male', birth: "02/11/1879 (Boca)", death: "24/07/1968 (Oncativo, Arg)" },
+    { id: 7, pids: [6], name: "Giuseppina Sartore", gender: 'female' },
+    { id: 8, pids: [9], fid: 2, mid: 3, name: "Emilio Felice Del Boca", gender: 'male', birth: "13/05/1882 (Boca)", death: "1960 (Boca)" },
+    { id: 9, pids: [8], name: "María Martinotti", gender: 'female'},
+    { id: 10, pids: [11], fid: 2, mid: 3, name: "Pietro Del Boca", gender: 'male', birth: "24/06/1883 (Boca)", death: "1948 (Boca)" },
+    { id: 11, pids: [10], name: "Carmelina Perolini", gender: 'female'},
+    { id: 12, pids: [13], fid: 2, mid: 3, name: "Pierino Luigi Del Boca", gender: 'male', birth: "15/10/1884 (Boca)", death: "1966 (Oncativo, Arg)" },
+    { id: 13, pids: [12], name: "Florinda Sartore", gender: 'female'},
+    { id: 14, pids: [15, 16], fid: 2, mid: 3, name: "Iginio Gaudenzio", gender: 'male', birth: "09/07/1887 (Boca)", death: "(Oncativo, Arg)" },
+    { id: 15, pids: [14], name: "Zia Pinin", gender: 'female'},
+    { id: 16, pids: [14], name: "Zia Judita", gender: 'female'},
+    { id: 17, pids: [18], fid: 2, mid: 3, name: "Domenica Teresa (Manghin)", gender: 'female', birth: "19/12/1892 (Boca)", death: "31/03/---- (Oncativo, Arg)" },
+    { id: 18, pids: [17], name: "Sebastino Bogliotti", gender: 'male'},
+    { id: 19, pids: [20], fid: 2, mid: 3, name: "Teresa Cristina (Teresin)", gender: 'female', birth: "16/04/1894 (Boca)", death: "29/07/1982 (Oncativo, Arg)" },
+    { id: 20, pids: [19], name: "Carlo Chiara", gender: 'male'},
+    { id: 21, pids: [22], fid: 2, mid: 3, name: "Cristina", gender: 'female', birth: "02/07/1895 (Boca)", death: "--/06/1987 (Oncativo, Arg)" },
+    { id: 22, pids: [21], name: "Michele Baretta", gender: 'male'},
+    { id: 23, pids: [24], fid: 2, mid: 3, name: "Giovanni Pietro", gender: 'male', birth: "17/01/1899 (Boca)", death: "1946 (Boca)" },
+    { id: 24, pids: [23], name: "Adelmina Vallaza", gender: 'female'},
+    // Cuarta Generacion
+    { id: 25, fid: 5, mid: 4, name: "Anita Vallazza", gender: 'female'},
+    { id: 26, fid: 5, mid: 4, name: "Italo Vallazza", gender: 'male'},
+    { id: 27, fid: 5, mid: 4, name: "Maria Vallazza", gender: 'female'},
+    { id: 28, fid: 5, mid: 4, name: "Vittorio Vallazza", gender: 'male'},
+    ])
+
+
+</script>
+</html>
