@@ -1,18 +1,23 @@
-FamilyTree.templates.delBoca = Object.assign({}, FamilyTree.templates.tommy);
+FamilyTree.templates.myTemplate = Object.assign({}, FamilyTree.templates.tommy);
+FamilyTree.templates.myTemplate.size = [150, 130];
+FamilyTree.templates.myTemplate.defs = '';
+FamilyTree.templates.myTemplate.ripple = {
+    radius: 100,
+    color: "#e6e6e6",
+    rect: null
+};
 
-FamilyTree.templates.delBoca.field_0 = '<text data-width="230" style="font-size: 20px;font-weight:bold;" fill="#ffffff" x="10" y="90" text-anchor="start">{val}</text>'
-FamilyTree.templates.delBoca.field_1 = '<text data-width="230" style="font-size: 14px;" fill="#ffffff" x="10" y="50" text-anchor="start">{val}</text>'
-FamilyTree.templates.delBoca.field_2 = '<text data-width="230" style="font-size: 14px;" fill="#ffffff" x="10" y="65" text-anchor="start">{val}</text>'
+FamilyTree.templates.myTemplate.field_0 = '<text style="font-size: 16px;" x="75" y="120" text-anchor="middle">{val}</text>';
 
-FamilyTree.templates.delBoca_male = Object.assign({}, FamilyTree.templates.delBoca);
-FamilyTree.templates.delBoca_male.node = '<rect x="0" y="0" height="120" width="250" stroke-width="1" fill="#F57C00" stroke="#aeaeae" rx="7" ry="7"></rect>';
-FamilyTree.templates.delBoca_female = Object.assign({}, FamilyTree.templates.delBoca);
-FamilyTree.templates.delBoca_female.node = '<rect x="0" y="0" height="120" width="250" stroke-width="1" fill="#039BE5" stroke="#aeaeae" rx="7" ry="7"></rect>';
-
+FamilyTree.templates.myTemplate_male = Object.assign({}, FamilyTree.templates.myTemplate);
+FamilyTree.templates.myTemplate_male.node = '<circle cx="75" cy="50" r="50" fill="#039be5" stroke-width="1" stroke="#aeaeae"></circle>';
+FamilyTree.templates.myTemplate_female = Object.assign({}, FamilyTree.templates.myTemplate);
+FamilyTree.templates.myTemplate_female.node = '<circle cx="75" cy="50" r="50" fill="#FF46A3" stroke-width="1" stroke="#aeaeae"></circle>';
 
 
 var family = new FamilyTree(document.getElementById("tree"), {
-    template: "delBoca",
+    template: "myTemplate",
+    enableSearch: false,
     nodeMouseClick: FamilyTree.action.expandCollapse,
     collapse: {
                 level: 2,
@@ -25,8 +30,6 @@ var family = new FamilyTree(document.getElementById("tree"), {
         },
     nodeBinding: {
         field_0: "name",
-        field_1: "birth",
-        field_2: "death",
     }});
 
 family.load([
