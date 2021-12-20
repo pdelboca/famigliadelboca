@@ -11,9 +11,9 @@ FamilyTree.templates.myTemplate.field_0 = '<text style="font-size: 16px;" x="75"
 FamilyTree.templates.myTemplate.field_1 = '<text style="font-size: 10px;" x="75" y="135" text-anchor="middle">{val}</text>';
 
 FamilyTree.templates.myTemplate_male = Object.assign({}, FamilyTree.templates.myTemplate);
-FamilyTree.templates.myTemplate_male.node = '<circle cx="75" cy="50" r="50" fill="#039be5" stroke-width="1" stroke="#aeaeae"></circle>';
+FamilyTree.templates.myTemplate_male.node = '<circle cx="75" cy="50" r="50" fill="#B5EAEA" stroke-width="1" stroke="#aeaeae"></circle>';
 FamilyTree.templates.myTemplate_female = Object.assign({}, FamilyTree.templates.myTemplate);
-FamilyTree.templates.myTemplate_female.node = '<circle cx="75" cy="50" r="50" fill="#FF46A3" stroke-width="1" stroke="#aeaeae"></circle>';
+FamilyTree.templates.myTemplate_female.node = '<circle cx="75" cy="50" r="50" fill="#FFBCBC" stroke-width="1" stroke="#aeaeae"></circle>';
 
 
 var family = new FamilyTree(document.getElementById("tree"), {
