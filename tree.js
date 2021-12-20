@@ -24,11 +24,6 @@ var family = new FamilyTree(document.getElementById("tree"), {
                 level: 2,
                 allChildren: true
             },
-    tags: {
-            hide: {
-                state: FamilyTree.COLLAPSE
-            }
-        },
     nodeBinding: {
         field_0: "name",
         field_1: "birth"
