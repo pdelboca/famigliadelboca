@@ -1,5 +1,5 @@
 FamilyTree.templates.myTemplate = Object.assign({}, FamilyTree.templates.tommy);
-FamilyTree.templates.myTemplate.size = [150, 130];
+FamilyTree.templates.myTemplate.size = [150, 140];
 FamilyTree.templates.myTemplate.defs = '';
 FamilyTree.templates.myTemplate.ripple = {
     radius: 100,
@@ -8,6 +8,7 @@ FamilyTree.templates.myTemplate.ripple = {
 };
 
 FamilyTree.templates.myTemplate.field_0 = '<text style="font-size: 16px;" x="75" y="120" text-anchor="middle">{val}</text>';
+FamilyTree.templates.myTemplate.field_1 = '<text style="font-size: 10px;" x="75" y="135" text-anchor="middle">{val}</text>';
 
 FamilyTree.templates.myTemplate_male = Object.assign({}, FamilyTree.templates.myTemplate);
 FamilyTree.templates.myTemplate_male.node = '<circle cx="75" cy="50" r="50" fill="#039be5" stroke-width="1" stroke="#aeaeae"></circle>';
@@ -30,6 +31,7 @@ var family = new FamilyTree(document.getElementById("tree"), {
         },
     nodeBinding: {
         field_0: "name",
+        field_1: "birth"
     }});
 
 family.load([
