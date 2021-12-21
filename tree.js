@@ -146,5 +146,22 @@ family.load([
     // Elisa
     { id: 83, mid: 49, name: "Gianni", gender: 'male'},
     { id: 84, mid: 49, name: "Paolo", gender: 'male'},
+    // Sexta Generacion
+    // Miguel
+    { id: 85, fid: 54, name: "Basilio", gender: 'male'},
+    { id: 86, fid: 54, name: "Tete", gender: 'male'},
+    // Atilio
+    { id: 87, fid: 55, name: "Atilio", gender: 'male'},
+    { id: 88, fid: 55, name: "Marcelo", gender: 'male'},
+    { id: 89, fid: 55, name: "Pablo", gender: 'male'},
+    { id: 90, fid: 55, name: "Javier", gender: 'male'},
+    { id: 91, fid: 55, name: "Cristina", gender: 'female'},
+    // Rodolfo
+    { id: 92, fid: 56, name: "Maria Laura", gender: 'male'},
+    { id: 93, fid: 56, name: "Pablo", gender: 'male'},
+    { id: 94, fid: 56, name: "Ezequiel", gender: 'male'},
+    // Mario
+    { id: 95, fid: 57, name: "Esteban", gender: 'male'},
+    { id: 96, fid: 57, name: "Patricio", gender: 'male'},
     ])
 
