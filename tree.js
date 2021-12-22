@@ -21,7 +21,7 @@ var family = new FamilyTree(document.getElementById("tree"), {
     enableSearch: false,
     nodeMouseClick: FamilyTree.action.expandCollapse,
     collapse: {
-                level: 3,
+                level: 4,
                 allChildren: true
             },
     nodeBinding: {
@@ -31,17 +31,18 @@ var family = new FamilyTree(document.getElementById("tree"), {
 
 family.load([
     //
-    //{ id: 100, pids: [101], name: "Franchesco Antonio Del Boca", gender: 'male', birth: '1741 (Boca)'},
-    //{ id: 101, pids: [100], name: "María Angela Valazza", gender: 'female'},
+    //{ id: xxx, pids: [xxx], name: "Franchesco Antonio Del Boca", gender: 'male', birth: '1741 (Boca)'},
+    //{ id: xxx, pids: [xxx], name: "María Angela Valazza", gender: 'female'},
     //
     { id: 98, name: "Carlo Gaudenzio Del Boca", gender: 'male'},
-    //{ id: 99, pids: [98], name: "Minazzoli Lucia", gender: 'female'},
+    //{ id: xx, pids: [xx], name: "Minazzoli Lucia", gender: 'female'},
     // Primera Generacion
-    { id: 1, pids: [97], fid: 98, mid: 99, name: "Giovanni Del Boca", gender: 'male', birth: '1815? (Boca)'},
+    { id: 1, pids: [97], fid: 98, name: "Giovanni Del Boca", gender: 'male', birth: '1815? (Boca)'},
     { id: 97, pids: [1], name: "Maria Margarita Bisetti", gender: 'female'},
     // Segunda Generacion
     { id: 2, pids: [3], fid: 1, mid: 97, name: "Gaudenzio Del Boca", gender: 'male', birth: '25/02/1853 (Boca)', death: '--/--/1929'},
     { id: 3, pids: [2], name: "Marianna Vallazza", gender: 'female', birth: "12/03/1855 (Boca)", death: "--/--/----" },
+    { id: 99, fid: 1, mid: 97, name: "Giovanni Battista Del Boca", gender: 'male', birth: '24/??/1857 (Boca)'},
     // Tercera Generacion
     { id: 4, pids: [5], fid: 2, mid: 3, name: "Maria Margherita", gender: 'female', birth: "15/01/1877 (Boca)", death: "--/--/---- (Córdoba, Arg)"},
     { id: 5, pids: [4], name: "Giuseppe Vallaza", gender: 'male'},
