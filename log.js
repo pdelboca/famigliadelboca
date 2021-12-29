@@ -1,1 +1,1 @@
-fetch('https://simpleanalytics.herokuapp.com/collect', { method: 'POST' });
+fetch('https://simpleanalytics.herokuapp.com/collect?page=' + window.location.href, { method: 'POST' });
