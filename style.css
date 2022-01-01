@@ -1,5 +1,6 @@
 body {
     background-color: #eee;
+    margin: 0px 20px 0px 20px;
 }
 
 h1 {
@@ -8,6 +9,11 @@ h1 {
 
 p {
     text-align: center;
+}
+
+main {
+    border:black outset 1px;
+    border-radius: 5px;
 }
 
 #tree > svg {
