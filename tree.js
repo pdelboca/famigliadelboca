@@ -24,7 +24,6 @@ var family = new FamilyTree(document.getElementById("tree"), {
     layout: FamilyTree.mixed,
     scaleInitial: FamilyTree.match.boundary,
     sticky: false,
-    align: FamilyTree.ORIENTATION,
     collapse: {
                 level: 4,
                 allChildren: true
