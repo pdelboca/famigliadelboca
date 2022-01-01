@@ -20,6 +20,11 @@ var family = new FamilyTree(document.getElementById("tree"), {
     template: "myTemplate",
     enableSearch: false,
     nodeMouseClick: FamilyTree.action.expandCollapse,
+    showYScroll: FamilyTree.scroll.visible,
+    layout: FamilyTree.mixed,
+    scaleInitial: FamilyTree.match.boundary,
+    sticky: false,
+    align: FamilyTree.ORIENTATION,
     collapse: {
                 level: 4,
                 allChildren: true
